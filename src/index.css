@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200..1000&display=swap');
+
+/* ==================== */
+/* CUSTOM PROPERTIES    */
+/* ==================== */
+:root {
+	/* Colors */
+	--color-dark: hsl(209, 23%, 22%);
+	--color-dark-bg: hsl(207, 26%, 17%);
+	--color-dark-text: hsl(200, 15%, 8%);
+	--color-light: hsl(0, 0%, 52%);
+	--color-light-bg: hsl(0, 0%, 98%);
+	--color-light-text: hsl(0, 0%, 100%);
+
+	/* Font */
+	--font-nunito: 'Nunito Sans', sans-serif;
+
+	/* Font size */
+	--font-size-small: 0.875rem;
+	--font-size-medium: 1rem;
+}
+
+/* ==================== */
+/* RESET                */
+/* ==================== */
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+button,
+input {
+	outline: none;
+	border: none;
+	cursor: pointer;
+	font: inherit;
+}
+
+a {
+	text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/* ==================== */
+/* MAIN                 */
+/* ==================== */
+html {
+	color-scheme: light dark;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body,
+#root,
+.layout {
+	width: 100%;
+	min-height: 100vh;
+}
+
+body {
+	color: var(--color-dark-text);
+	font-family: var(--font-nunito);
+	line-height: 1.5;
+	font-weight: 400;
+	overflow-x: hidden;
+	background-color: var(--color-light-bg);
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		color: hsl(var(--color-light-text));
+		background-color: hsl(var(--color-dark-bg));
+	}
+}
