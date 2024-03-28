@@ -1,0 +1,15 @@
+.header-wrapper {
+	width: 100%;
+	padding-block: 1rem;
+	-webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .header-wrapper {
+	background-color: var(--color-dark);
+}
+
+[data-theme="light"] .header-wrapper {
+	background-color: var(--color-white);
+}

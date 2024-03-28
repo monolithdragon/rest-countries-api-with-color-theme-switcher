@@ -10,7 +10,7 @@
 	--color-dark-text: hsl(200, 15%, 8%);
 	--color-light: hsl(0, 0%, 52%);
 	--color-light-bg: hsl(0, 0%, 98%);
-	--color-light-text: hsl(0, 0%, 100%);
+	--color-white: hsl(0, 0%, 100%);
 
 	/* Font */
 	--font-nunito: 'Nunito Sans', sans-serif;
@@ -74,17 +74,55 @@ body,
 }
 
 body {
-	color: var(--color-dark-text);
 	font-family: var(--font-nunito);
 	line-height: 1.5;
 	font-weight: 400;
-	overflow-x: hidden;
-	background-color: var(--color-light-bg);
 }
 
 @media (prefers-color-scheme: dark) {
-	body {
-		color: hsl(var(--color-light-text));
-		background-color: hsl(var(--color-dark-bg));
+	html {
+		color: var(--color-white);
+		background-color: var(--color-dark-bg);
 	}
+}
+
+[data-theme="dark"] {
+	color: var(--color-white);
+	background-color: var(--color-dark-bg);
+}
+
+[data-theme="light"] {
+	color: var(--color-dark-text);
+	background-color: var(--color-light-bg);
+}
+
+.layout {
+	max-width: 90em;
+	margin: 0 auto;
+	overflow-x: hidden;
+}
+
+/* ==================== */
+/* UTILITIES            */
+/* ==================== */
+.container {
+	width: 100%;
+	padding-inline: 1rem;
+	margin: 0 auto;
+}
+
+@media (min-width: 60em) {
+	.container {
+		padding-inline: 4rem;
+	}
+}
+
+.flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.grid-container {
+	display: grid;
 }

@@ -1,14 +1,25 @@
+import { ThemeProvider } from 'contexts/theme_provider';
+import DarkModeButton from 'components/theme_button';
 import { Outlet } from 'react-router-dom';
+import './app.css';
 
 function AppLayout() {
 	return (
-		<div>
-			<header></header>
-			<main>
-				<Outlet />
-			</main>
-			<footer></footer>
-		</div>
+		<ThemeProvider>
+			<div className='layout'>
+				<header className='header-wrapper'>
+					<div className='container'>
+						<div className='flex'>
+							<h2>Where in the world?</h2>
+							<DarkModeButton />
+						</div>
+					</div>
+				</header>
+				<main className='container'>
+					<Outlet />
+				</main>
+			</div>
+		</ThemeProvider>
 	);
 }
 
