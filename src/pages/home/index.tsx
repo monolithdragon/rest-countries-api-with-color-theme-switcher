@@ -12,7 +12,7 @@ function HomePage() {
         <CountrySearch />
         <FilterByRegion regions={data} />
       </section>
-      <section>
+      <section className="mt-12">
         <CountryList />
       </section>
     </ContentLayout>
