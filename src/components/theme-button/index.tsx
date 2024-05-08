@@ -12,7 +12,7 @@ function ThemeButton() {
   return (
     <Button
       type="button"
-      className="gap-2 hover:scale-105 focus:scale-105"
+      className="gap-2 hover:border-b hover:border-solid hover:pb-2 focus-visible:border-b focus-visible:border-solid focus-visible:pb-2"
       onClick={toggleTheme}
     >
       {theme === 'light' ? <IoMoonOutline /> : <IoMoon />}
