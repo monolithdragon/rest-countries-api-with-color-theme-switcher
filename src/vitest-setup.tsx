@@ -7,6 +7,7 @@ import {
   renderHook,
 } from '@testing-library/react';
 import React from 'react';
+import { RouterProvider, createMemoryRouter } from 'react-router-dom';
 import { afterEach } from 'vitest';
 
 afterEach(() => {
@@ -49,7 +50,22 @@ function customRender(ui: React.ReactElement, options: RenderOptions = {}) {
   });
 }
 
+function renderWithRouter(
+  ui: React.ReactElement,
+  path = '/',
+  options?: Omit<RenderOptions, 'wrapper'>,
+) {
+  const { pathname } = new URL(`http://www.example.com${path}`);
+
+  const router = createMemoryRouter([{ path: pathname, element: ui }], {
+    initialEntries: [path],
+  });
+
+  return render(<RouterProvider router={router} />, { ...options });
+}
+
 export * from '@testing-library/react';
 // override render export
 export { customRenderHook as renderHook };
 export { customRender as render };
+export { renderWithRouter };
