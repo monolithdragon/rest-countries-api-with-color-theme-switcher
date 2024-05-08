@@ -1,11 +1,12 @@
 import Container from 'components/container';
+import ThemeButton from 'components/theme-button';
 
 function Header() {
   return (
-    <header>
+    <header className="p-4">
       <Container>
         <h1>Where is in the world?</h1>
-        <button>Dark Button</button>
+        <ThemeButton />
       </Container>
     </header>
   );
