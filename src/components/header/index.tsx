@@ -3,10 +3,12 @@ import ThemeButton from 'components/theme-button';
 
 function Header() {
   return (
-    <header className="p-4">
+    <header className="element p-4">
       <Container>
-        <h1>Where is in the world?</h1>
-        <ThemeButton />
+        <div className="flex items-center justify-between">
+          <h1 className="font-bold md:text-2xl">Where in the world?</h1>
+          <ThemeButton />
+        </div>
       </Container>
     </header>
   );
