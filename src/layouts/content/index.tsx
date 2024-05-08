@@ -5,7 +5,7 @@ type Props = PropsWithChildren;
 
 function ContentLayout({ children }: Props) {
   return (
-    <main>
+    <main className="p-4">
       <Container>{children}</Container>
     </main>
   );
