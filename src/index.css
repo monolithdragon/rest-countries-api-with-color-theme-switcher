@@ -3,3 +3,45 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --color-dark-background: hsl(207, 26%, 17%);
+    --color-light-background: hsl(0, 0%, 98%);
+    --color-dark-text: hsl(200, 15%, 8%);
+    --color-light-text: hsl(0, 0%, 100%);
+    --color-dark: hsl(209, 23%, 22%);
+    --color-light: hsl(0, 0%, 100%);
+    --color-input: hsl(0, 0%, 52%);
+  }
+
+  body {
+    font-family: 'Nunito Sans', sans-serif;
+  }
+
+  [data-theme='light'] {
+    background-color: var(--color-light-background);
+    color: var(--color-dark-text);
+  }
+
+  [data-theme='dark'] {
+    background-color: var(--color-dark-background);
+    color: var(--color-light-text);
+  }
+
+  [data-theme='light'] .element {
+    background-color: var(--color-light);
+    color: var(--color-dark-text);
+    box-shadow:
+      0 0px 4px 0 rgba(0, 0, 0, 0.1),
+      0 0px 4px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  [data-theme='dark'] .element {
+    background-color: var(--color-dark);
+    color: var(--color-light-text);
+    box-shadow:
+      0 0px 4px 0 rgba(0, 0, 0, 0.1),
+      0 0px 4px 0 rgba(0, 0, 0, 0.1);
+  }
+}
