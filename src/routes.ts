@@ -8,7 +8,10 @@ export const routes = createBrowserRouter(
     {
       path: '/',
       element: React.createElement(AppLayout),
-      children: [{ index: true, element: React.createElement(HomePage) }],
+      children: [
+        { index: true, element: React.createElement(HomePage) },
+        { path: ':id', element: React.createElement(HomePage) },
+      ],
     },
   ],
   {
