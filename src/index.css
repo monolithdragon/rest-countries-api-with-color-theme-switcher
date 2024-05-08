@@ -9,10 +9,10 @@
     --color-dark-background: hsl(207, 26%, 17%);
     --color-light-background: hsl(0, 0%, 98%);
     --color-dark-text: hsl(200, 15%, 8%);
+    --color-light-input-text: hsl(0, 0%, 52%);
     --color-light-text: hsl(0, 0%, 100%);
     --color-dark: hsl(209, 23%, 22%);
     --color-light: hsl(0, 0%, 100%);
-    --color-input: hsl(0, 0%, 52%);
   }
 
   body {
