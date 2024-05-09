@@ -1,4 +1,5 @@
 import AppLayout from 'layouts/app';
+import ErrorPage from 'pages/error';
 import HomePage from 'pages/home';
 import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
@@ -8,6 +9,7 @@ export const routes = createBrowserRouter(
     {
       path: '/',
       element: React.createElement(AppLayout),
+      errorElement: React.createElement(ErrorPage),
       children: [
         {
           index: true,
