@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-type Props = {};
-
-export function Search({}: Props) {
+export function Search() {
   const [value, setValue] = useState<string>('');
+  const navigate = useNavigate();
 
   function handleChange(event: React.ChangeEvent<HTMLInputElement>): void {
     event.preventDefault();
@@ -14,7 +14,7 @@ export function Search({}: Props) {
     if (event.code === 'Enter') {
       setValue('');
 
-      // TODO: search the country
+      navigate(`../${event.currentTarget.value.toLowerCase()}`);
     }
   }
 
