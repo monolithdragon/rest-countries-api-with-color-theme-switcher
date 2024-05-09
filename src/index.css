@@ -32,16 +32,12 @@
   [data-theme='light'] .element {
     background-color: var(--color-light);
     color: var(--color-dark-text);
-    box-shadow:
-      0 0px 4px 0 rgba(0, 0, 0, 0.1),
-      0 0px 4px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.05);
   }
 
   [data-theme='dark'] .element {
     background-color: var(--color-dark);
     color: var(--color-light-text);
-    box-shadow:
-      0 0px 4px 0 rgba(0, 0, 0, 0.1),
-      0 0px 4px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.05);
   }
 }
