@@ -8,6 +8,7 @@ type Props = {
 
 function FilterByRegion({ regions }: Props) {
   const { isOpen, toggleOpen } = useToggle();
+
   return (
     <div className="element relative w-52 rounded">
       <FilterButton title="Filter by Region" open={toggleOpen} />

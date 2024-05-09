@@ -3,7 +3,6 @@ import FilterByRegion from '.';
 
 describe('FilterByRegion', () => {
   const regions = ['Region A', 'Region B', 'Region C'];
-
   it('renders FilterByRegion component correctly', () => {
     const { getByText } = render(<FilterByRegion regions={regions} />);
 
