@@ -1,12 +1,10 @@
 import { Search } from 'components/ui/search';
 import { FaMagnifyingGlass } from 'react-icons/fa6';
 
-type Props = {};
-
-function CountrySearch({}: Props) {
+function CountrySearch() {
   return (
-    <div className="element inline-flex w-full items-center gap-2 rounded px-4 py-4 text-sm lg:w-2/5">
-      <FaMagnifyingGlass />
+    <div className="element inline-flex w-full items-center gap-2 rounded p-4 text-sm focus-within:outline focus-within:outline-1 lg:w-[470px]">
+      <FaMagnifyingGlass className="text-base text-[--color-light-input-text] dark:text-inherit" />
       <Search />
     </div>
   );
